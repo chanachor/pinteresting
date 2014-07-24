@@ -1,8 +1,10 @@
-Rails.application.routes.draw do
+  Rails.application.routes.draw do
+  devise_for :users
   get 'git/status'
 
   root 'pages#home'
   get "about" => "pages#about" #creates about_path
+  # get "new_user_registration" => "devise/registrations#new" #creates new_user_registration path
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
